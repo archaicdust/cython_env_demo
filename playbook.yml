@@ -7,15 +7,23 @@
   sudo: true
   gather_facts: no
 
+  # tasks:
+  #   - name: updates a server
+  #     apt: update_cache=yes
+
+  # tasks:
+  #   - name: upgrade a server
+  #     apt: upgrade=full
+
   tasks:
     - name: install vim, git
-      apt: pkg={{item}} state=installed update_cache=yes
+      apt: pkg={{item}} state=installed
       with_items:
         - vim
         - git
 
     - name: install pypy
-      apt: pkg={{item}} state=installed update_cache=yes
+      apt: pkg={{item}} state=installed
       with_items:
         - pypy
         - pypy-dev
