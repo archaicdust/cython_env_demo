@@ -11,6 +11,7 @@
 ```
 
 ```shell
+  $ sudo apt-get install git
   $ git clone https://github.com/archaicdust/cython_env_demo.git
   $ cd cython_env_demo
 
